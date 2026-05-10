@@ -1,5 +1,3 @@
-import 'package:apkinventaris/pages/pratnavigation.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
@@ -27,7 +25,6 @@ class _RegisterState extends State<Register> {
       }
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,5 +98,6 @@ class _RegisterState extends State<Register> {
         ),
       ),
     );
+    
   }
 }
