@@ -1,3 +1,5 @@
+import 'package:apkinventaris/pages/pratnavigation.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
@@ -64,9 +66,6 @@ class _RegisterState extends State<Register> {
                   filled: true,
                   fillColor: Colors.greenAccent.withValues(alpha: 0.4),
                   hintText: "password",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(22),
-                  ),
                   prefix: Icon(Icons.shield, color: Colors.greenAccent),
                   suffix: IconButton(onPressed: isSecure, icon: Icon(_icon)),
                 ),
