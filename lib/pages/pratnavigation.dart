@@ -22,7 +22,12 @@ class _PratnavigationState extends State<Pratnavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('APK INVENTARIS KELAS', style: TextStyle(color: Colors.blue))),
+      appBar: AppBar(
+        title: Text(
+          'APK INVENTARIS KELAS',
+          style: TextStyle(color: Colors.blue),
+        ),
+      ),
       drawer: Drawer(
         elevation: 5,
         child: Container(
@@ -31,24 +36,16 @@ class _PratnavigationState extends State<Pratnavigation> {
           color: Colors.grey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               SizedBox(height: 10),
               Text('pengaturan'),
               SizedBox(height: 20),
-              Row(
-                children: [
-                  Icon(Icons.home),
-                  Text('home'),
-                  Icon(Icons.phone),
-                  Text('help'),
-                  Icon(Icons.undo),
-                  Text('home'),
-                  SizedBox(height: 50),
-                  Icon(Icons.arrow_back),
-                  Text('sign out'),
-                ],
-              )
+              Row(children: [Icon(Icons.home), Text('home')]),
+              Row(children: [Icon(Icons.phone), Text('help')]),
+              Row(children: [Icon(Icons.undo), Text('home')]),
+
+              SizedBox(height: 50),
+              Row(children: [Icon(Icons.arrow_back), Text('sign out')]),
             ],
           ),
         ),
@@ -69,7 +66,7 @@ class _PratnavigationState extends State<Pratnavigation> {
               (r) => BottomNavigationBarItem(
                 icon: Icon(r.value.icon, color: Colors.black),
                 label: r.value.label,
-                activeIcon: Icon(r.value.icon,color: Colors.blueGrey,)
+                activeIcon: Icon(r.value.icon, color: Colors.blueGrey),
               ),
             )
             .toList(),

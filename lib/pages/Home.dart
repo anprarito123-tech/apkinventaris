@@ -15,32 +15,40 @@ class _HomeState extends State<Home> {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.purple,
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text('APK INVENTARIS KELAS', style: TextStyle(color: Colors.blue)),
-          ClipOval(
-            child: Image.asset(
-              'assets/images/zitopp.png',
-              height: 50,
-              width: 50,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'APK INVENTARIS KELAS',
+                  style: TextStyle(color: Colors.blue),
+                ),
+                ClipOval(
+                  child: Image.asset(
+                    'assets/images/zitopp.png',
+                    height: 50,
+                    width: 50,
+                  ),
+                ),
+              ],
             ),
-          ),
-          SizedBox(height: 20),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text('nama kelas:', style: TextStyle(color: Colors.white)),
-              SizedBox(height: 10),
-            ],
-          ),
-          SingleChildScrollView(
-            child: Container(
+
+            SizedBox(height: 20),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text('nama kelas:', style: TextStyle(color: Colors.white)),
+                SizedBox(height: 10),
+              ],
+            ),
+            Container(
               width: size.width,
-              height: data.length / 2 + 200,
+              height: size.height,
               padding: EdgeInsets.all(10),
               child: GridView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                itemCount: data.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 10,
@@ -55,8 +63,8 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
