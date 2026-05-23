@@ -1,18 +1,18 @@
+import 'package:apkinventaris/class/jmlh_kelas_page.dart';
 import 'package:flutter/material.dart';
 
 class DataWidget extends StatelessWidget {
   final String title;
   final String photo;
-  final Widget page;
   final double width;
   final double heigh;
+  final int id;
   const DataWidget({
     super.key,
     required this.title,
     required this.photo,
-    required this.page,
     required this.width,
-    required this.heigh,
+    required this.heigh, required this.id,
   });
 
   @override
@@ -20,7 +20,7 @@ class DataWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => page),
+        MaterialPageRoute(builder: (context) => JmlhKelasPage(id: id)),
       ),
       child: Card(
         elevation: 3,

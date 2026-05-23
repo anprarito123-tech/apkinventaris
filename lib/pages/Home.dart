@@ -57,9 +57,8 @@ class _HomeState extends State<Home> {
                 itemBuilder: (context, raan) => DataWidget(
                   title: data[raan].title,
                   photo: data[raan].photo,
-                  page: data[raan].page,
                   width: size.width / 2 - 30,
-                  heigh: 50,
+                  heigh: 50, id: raan,
                 ),
               ),
             ),
