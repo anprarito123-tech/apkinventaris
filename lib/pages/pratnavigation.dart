@@ -28,28 +28,7 @@ class _PratnavigationState extends State<Pratnavigation> {
           style: TextStyle(color: Colors.blue),
         ),
       ),
-      drawer: Drawer(
-        elevation: 5,
-        child: Container(
-          width: double.infinity,
-          height: double.infinity,
-          color: Colors.grey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(height: 10),
-              Text('pengaturan'),
-              SizedBox(height: 20),
-              Row(children: [Icon(Icons.home), Text('home')]),
-              Row(children: [Icon(Icons.phone), Text('help')]),
-              Row(children: [Icon(Icons.undo), Text('home')]),
 
-              SizedBox(height: 50),
-              Row(children: [Icon(Icons.arrow_back), Text('sign out')]),
-            ],
-          ),
-        ),
-      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
         elevation: 5,

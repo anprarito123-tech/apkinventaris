@@ -16,16 +16,16 @@ class _PratXsijaState extends State<PratXsija> {
   TextEditingController _pictures = TextEditingController();
   bool _isSecure = true;
   bool _check = true;
-  void isSecure(){
+  void isSecure() {
     setState(() {
-      if(_isSecure){
+      if (_isSecure) {
         _isSecure = false;
-      }else{
+      } else {
         _isSecure = true;
       }
     });
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,13 +35,146 @@ class _PratXsijaState extends State<PratXsija> {
           children: [
             Text('KURSI:'),
             SizedBox(height: 5),
+            Container(
+              width: 300,
+              height: 100,
+              child: TextField(
+                controller: _chairs,
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.greenAccent.withValues(alpha: 0.4),
+                  hintText: "kursi",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 5),
+            Text('kondisi:'),
+            SizedBox(height: 5),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Checkbox(
+                  value: _check,
+                  onChanged: (value) {
+                    setState(() {
+                      _check = !_check;
+                    });
+                  },
+                ),
+                Text('baik'),
+                Checkbox(
+                  value: _check,
+                  onChanged: (value) {
+                    setState(() {
+                      _check = !_check;
+                    });
+                  },
+                ),
+              ],
+            ),
+            Text('rusak'),
+            SizedBox(height: 5),
+            Text('MEJA:'),
+            SizedBox(height: 5),
+            Container(
+              width: 300,
+              height: 100,
+              child: TextField(
+                controller: _table,
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.greenAccent.withValues(alpha: 0.4),
+                  hintText: "meja",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 5),
+            Text('kondisi:'),
+            SizedBox(height: 5),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Checkbox(
+                  value: _check,
+                  onChanged: (value) {
+                    setState(() {
+                      _check = !_check;
+                    });
+                  },
+                ),
+                Text('baik'),
+                Checkbox(
+                  value: _check,
+                  onChanged: (value) {
+                    setState(() {
+                      _check = !_check;
+                    });
+                  },
+                ),
+              ],
+            ),
+            Text('rusak'),
+            SizedBox(height: 5),
+            Text('SAPU:'),
+            SizedBox(height: 5),
+            Container(
+              child: TextField(
+                controller: _broom,
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.greenAccent.withValues(alpha: 0.4),
+                  hintText: "sapu",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 5),
+            Text('kondisi:'),
+            SizedBox(height: 5),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Checkbox(
+                  value: _check,
+                  onChanged: (value) {
+                    setState(() {
+                      _check = !_check;
+                    });
+                  },
+                ),
+                Text('baik'),
+                Checkbox(
+                  value: _check,
+                  onChanged: (value) {
+                    setState(() {
+                      _check = !_check;
+                    });
+                  },
+                ),
+              ],
+            ),
+            Text('rusak'),
+            SizedBox(height: 5),
+            Text('PAPAN TULIS:'),
+            SizedBox(height: 5),
             TextField(
-              controller: _chairs,
+              controller: _board,
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.greenAccent.withValues(alpha: 0.4),
-                hintText: "kursi",
+                hintText: "papan tulis",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(4),
                 ),
@@ -51,6 +184,48 @@ class _PratXsijaState extends State<PratXsija> {
             Text('kondisi:'),
             SizedBox(height: 5),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Checkbox(
+                  value: _check,
+                  onChanged: (value) {
+                    setState(() {
+                      _check = !_check;
+                    });
+                  },
+                ),
+                Text('baik'),
+                Checkbox(
+                  value: _check,
+                  onChanged: (value) {
+                    setState(() {
+                      _check = !_check;
+                    });
+                  },
+                ),
+              ],
+            ),
+            Text('rusak'),
+            SizedBox(height: 5),
+            Text('GAMBAR PRESIDEN&WAKIL:'),
+            SizedBox(height: 5),
+            TextField(
+              controller: _pictures,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.greenAccent.withValues(alpha: 0.4),
+                hintText: "gambar presiden&wakil",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(4),
+                ),
+              ),
+            ),
+            SizedBox(height: 5),
+            Text('kondisi:'),
+            SizedBox(height: 5),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Checkbox(
                   value: _check,
@@ -70,181 +245,15 @@ class _PratXsijaState extends State<PratXsija> {
                   },
                 ),
                 Text('rusak'),
-                SizedBox(height: 5),
-                Text('MEJA:'),
-                SizedBox(height: 5),
-                TextField(
-                  controller: _table,
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.greenAccent.withValues(alpha: 0.4),
-                    hintText: "meja",
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 5),
-                Text('kondisi:'),
-                SizedBox(height: 5),
-                Row(
-                  children: [
-                    Checkbox(
-                      value: _check,
-                      onChanged: (value) {
-                        setState(() {
-                          _check = !_check;
-                        });
-                      },
-                    ),
-                    Text('baik'),
-                    Checkbox(
-                      value: _check,
-                      onChanged: (value) {
-                        setState(() {
-                          _check = !_check;
-                        });
-                      },
-                    ),
-                    Text('rusak'),
-                    SizedBox(height: 5),
-                    Text('SAPU:'),
-                    SizedBox(height: 5),
-                    TextField(
-                      controller: _broom,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.greenAccent.withValues(alpha: 0.4),
-                        hintText: "sapu",
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 5),
-                    Text('kondisi:'),
-                    SizedBox(height: 5),
-                    Row(
-                      children: [
-                        Checkbox(
-                          value: _check,
-                          onChanged: (value) {
-                            setState(() {
-                              _check = !_check;
-                            });
-                          },
-                        ),
-                        Text('baik'),
-                        Checkbox(
-                          value: _check,
-                          onChanged: (value) {
-                            setState(() {
-                              _check = !_check;
-                            });
-                          },
-                        ),
-                        Text('rusak'),
-                        SizedBox(height: 5),
-                        Text('PAPAN TULIS:'),
-                        SizedBox(height: 5),
-                        TextField(
-                          controller: _board,
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.greenAccent.withValues(
-                              alpha: 0.4,
-                            ),
-                            hintText: "papan tulis",
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 5),
-                        Text('kondisi:'),
-                        SizedBox(height: 5),
-                        Row(
-                          children: [
-                            Checkbox(
-                              value: _check,
-                              onChanged: (value) {
-                                setState(() {
-                                  _check = !_check;
-                                });
-                              },
-                            ),
-                            Text('baik'),
-                            Checkbox(
-                              value: _check,
-                              onChanged: (value) {
-                                setState(() {
-                                  _check = !_check;
-                                });
-                              },
-                            ),
-                            Text('rusak'),
-                            SizedBox(height: 5),
-                            Text('GAMBAR PRESIDEN&WAKIL:'),
-                            SizedBox(height: 5),
-                            TextField(
-                              controller: _pictures,
-                              keyboardType: TextInputType.number,
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.greenAccent.withValues(
-                                  alpha: 0.4,
-                                ),
-                                hintText: "gambar presiden&wakil",
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(4),
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: 5),
-                            Text('kondisi:'),
-                            SizedBox(height: 5),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  value: _check,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      _check = !_check;
-                                    });
-                                  },
-                                ),
-                                Text('baik'),
-                                Checkbox(
-                                  value: _check,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      _check = !_check;
-                                    });
-                                  },
-                                ),
-                                Text('rusak'),
-                              ],
-                            ),
-                            SizedBox(height: 15),
-                            ElevatedButton(
-                              onPressed: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Submit(),
-                                ),
-                              ),
-                              child: Text('submit'),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
               ],
+            ),
+            SizedBox(height: 15),
+            ElevatedButton(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Submit()),
+              ),
+              child: Text('submit'),
             ),
           ],
         ),

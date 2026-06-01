@@ -18,7 +18,10 @@ class _SubmitState extends State<Submit> {
         color: Colors.red,
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Text('SUBMIT BERHASIL',style: TextStyle(color: Colors.black,fontSize: 10),),
+      child: Text(
+        'SUBMIT BERHASIL',
+        style: TextStyle(color: Colors.black, fontSize: 10),
+      ),
     );
   }
 }

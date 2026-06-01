@@ -1,5 +1,4 @@
-import 'package:apkinventaris/submit/Han_Xrpl1.dart';
-import 'package:apkinventaris/submit/Han_Xrpl2.dart';
+
 import 'package:flutter/material.dart';
 
 import '../services/Prat_class_services.dart';
@@ -17,11 +16,10 @@ class _JmlhKelasPageState extends State<JmlhKelasPage> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(title: Text("JUMLAH KELAS X RPL "), actions: []),
+      appBar: AppBar(title: Text("JUMLAH ${data[widget.id].title} "), actions: []),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 15),
             Container(
               width: size.width,
               height: size.height,
